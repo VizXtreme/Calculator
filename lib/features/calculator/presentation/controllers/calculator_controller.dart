@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../domain/entities/calculator_entity.dart';
+import '../../domain/repositories/calculator_repository.dart';
 import '../../data/repositories/calculator_repository_impl.dart';
 import '../../domain/usecases/calculate_usecase.dart';
 
