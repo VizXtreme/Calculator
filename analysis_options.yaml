@@ -3,14 +3,6 @@ include: package:flutter_lints/flutter.yaml
 linter:
   rules:
     - prefer_const_constructors
-    - prefer_const_literals_to_create_immutables
-    - always_use_package_imports
+    - prefer_const_declarations
     - avoid_print
-    - always_declare_return_types
-    - prefer_final_fields
-    - prefer_final_locals
-    - sort_constructors_first
-    - camel_case_types
-    - library_names
-    - package_prefixed_library_names
-    - curly_braces_in_flow_control_structures
+    - prefer_single_quotes

@@ -1,40 +1,36 @@
 import 'package:flutter/material.dart';
+import '../../../../core/constants/app_constants.dart';
 
 class CalculatorButton extends StatelessWidget {
-  final String text;
-  final Color? color;
-  final Color? textColor;
+  final String label;
   final VoidCallback onPressed;
+  final Color backgroundColor;
+  final Color textColor;
 
   const CalculatorButton({
     super.key,
-    required this.text,
-    this.color,
-    this.textColor,
+    required this.label,
     required this.onPressed,
+    required this.backgroundColor,
+    required this.textColor,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: color ?? Theme.of(context).colorScheme.surfaceContainer,
-            foregroundColor: textColor ?? Theme.of(context).colorScheme.onSurface,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(24),
-            ),
-            elevation: 0,
-            padding: const EdgeInsets.all(24),
-          ),
-          onPressed: onPressed,
+    return Material(
+      color: backgroundColor,
+      borderRadius: BorderRadius.circular(AppConstants.buttonRadius),
+      child: InkWell(
+        onTap: onPressed,
+        borderRadius: BorderRadius.circular(AppConstants.buttonRadius),
+        child: Container(
+          alignment: Alignment.center,
           child: Text(
-            text,
-            style: const TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
+            label,
+            style: TextStyle(
+              fontSize: AppConstants.buttonFontSize,
+              fontWeight: FontWeight.w500,
+              color: textColor,
             ),
           ),
         ),

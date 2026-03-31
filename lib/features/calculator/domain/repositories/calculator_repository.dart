@@ -1,7 +1,6 @@
-import '../entities/calculation_result.dart';
+import 'package:dartz/dartz.dart';
+import '../../../../core/errors/failures.dart';
 
 abstract class CalculatorRepository {
-  Future<String> calculate(String expression);
-  Future<List<CalculationResult>> getHistory();
-  Future<void> saveResult(CalculationResult result);
+  double calculate(double a, double b, String operation);
 }
