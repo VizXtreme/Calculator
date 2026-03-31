@@ -1,4 +1,4 @@
-import '../repositories/calculator_repository.dart';
+import '../../domain/repositories/calculator_repository.dart';
 
 class CalculatorRepositoryImpl implements CalculatorRepository {
   @override

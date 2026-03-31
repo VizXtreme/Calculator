@@ -1,5 +1,4 @@
 import 'package:go_router/go_router.dart';
-import 'package:flutter/material.dart';
 import '../../features/calculator/presentation/screens/calculator_screen.dart';
 
 class AppRouter {

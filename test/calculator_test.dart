@@ -1,11 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:calculator_app/features/calculator/domain/usecases/calculate_usecase.dart';
+import 'package:calculator_app/features/calculator/domain/repositories/calculator_repository.dart';
 import 'package:calculator_app/features/calculator/data/repositories/calculator_repository_impl.dart';
 import 'package:dartz/dartz.dart';
 
 void main() {
   late CalculateUseCase useCase;
-  late CalculatorRepositoryImpl repository;
+  late CalculatorRepository repository;
 
   setUp(() {
     repository = CalculatorRepositoryImpl();

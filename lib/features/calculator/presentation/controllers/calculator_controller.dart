@@ -3,7 +3,7 @@ import '../../domain/entities/calculator_entity.dart';
 import '../../data/repositories/calculator_repository_impl.dart';
 import '../../domain/usecases/calculate_usecase.dart';
 
-final calculatorRepositoryProvider = Provider<CalculatorRepositoryImpl>(
+final calculatorRepositoryProvider = Provider<CalculatorRepository>(
   (ref) => CalculatorRepositoryImpl(),
 );
 
